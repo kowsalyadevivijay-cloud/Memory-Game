@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Cosmic Memory Match</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body> 
+  <div class="container">
+    <header class="header">
+      <h1><i class="fas fa-star"></i> Cosmic Memory <i class="fas fa-star"></i></h1>
+      <div class="stats">
+        <div class="stat"><span>Moves:</span> <span id="moves">0</span></div>
+        <div class="stat"><span>Time:</span> <span id="time">0:00</span></div>
+        <div class="stat"><span>Matches:</span> <span id="matches">0/0</span></div>
+        <div class="stat"><span>Best:</span> <span id="bestScore">—</span></div>
+      </div>
+      <div class="controls">
+        <label for="difficulty">Level:</label>
+        <select id="difficulty">
+          <option value="6">Easy (6 pairs)</option>
+          <option value="8" selected>Medium (8 pairs)</option>
+          <option value="10">Hard (10 pairs)</option>
+        </select>
+        <button class="btn" id="restartBtn"><i class="fas fa-redo"></i> Restart</button>
+        <button class="btn" id="muteBtn"><i class="fas fa-volume-mute"></i> Mute</button>
+      </div>
+    </header>
+    <main id="gameBoard" class="game-board"></main>
+    <div id="winModal" class="modal">
+      <div class="modal-content">
+        <h2><i class="fas fa-trophy"></i> You Win! <i class="fas fa-trophy"></i></h2>
+        <p>Moves: <span id="finalMoves"></span><br>Time: <span id="finalTime"></span></p>
+        <button class="btn" id="playAgainBtn">Play Again</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
